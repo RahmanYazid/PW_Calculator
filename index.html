@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixel World Fish Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="main-header sticky" id="stickyHeader">
+        <div class="header-content">
+          <h1>Pixel World</h1>
+          <h3>Fish Gems Calculator</h3>
+        </div>
+      </header>
+      <form id="fishForm">
+        <div class="category-section">
+          <h2 class="category-title">Dumb Fish</h2>
+          <div class="inputs-container">
+            <div class="input-group">
+              <label for="tiny">Tiny</label>
+              <input
+                type="number"
+                id="tiny"
+                class="dumb-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="small">Small</label>
+              <input
+                type="number"
+                id="small"
+                class="dumb-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="medium">Med</label>
+              <input
+                type="number"
+                id="medium"
+                class="dumb-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="large">Large</label>
+              <input
+                type="number"
+                id="large"
+                class="dumb-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="huge">Huge</label>
+              <input
+                type="number"
+                id="huge"
+                class="dumb-input"
+                placeholder="0"
+              />
+            </div>
+          </div>
+          <div class="result-sub">
+            Gems: <span id="dumbTotalDisplay">0</span>
+          </div>
+        </div>
+
+        <div class="category-section">
+          <h2 class="category-title">Herring</h2>
+          <div class="inputs-container">
+            <div class="input-group">
+              <label for="her-tiny">Tiny</label>
+              <input
+                type="number"
+                id="her-tiny"
+                class="her-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="her-small">Small</label>
+              <input
+                type="number"
+                id="her-small"
+                class="her-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="her-medium">Med</label>
+              <input
+                type="number"
+                id="her-medium"
+                class="her-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="her-large">Large</label>
+              <input
+                type="number"
+                id="her-large"
+                class="her-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="her-huge">Huge</label>
+              <input
+                type="number"
+                id="her-huge"
+                class="her-input"
+                placeholder="0"
+              />
+            </div>
+          </div>
+          <div class="result-sub">
+            Gems: <span id="herTotalDisplay">0</span>
+          </div>
+        </div>
+
+        <div class="category-section">
+          <h2 class="category-title">Kingfish</h2>
+          <div class="inputs-container">
+            <div class="input-group">
+              <label for="king-tiny">Tiny</label>
+              <input
+                type="number"
+                id="king-tiny"
+                class="king-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="king-small">Small</label>
+              <input
+                type="number"
+                id="king-small"
+                class="king-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="king-medium">Med</label>
+              <input
+                type="number"
+                id="king-medium"
+                class="king-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="king-large">Large</label>
+              <input
+                type="number"
+                id="king-large"
+                class="king-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="king-huge">Huge</label>
+              <input
+                type="number"
+                id="king-huge"
+                class="king-input"
+                placeholder="0"
+              />
+            </div>
+          </div>
+          <div class="result-sub">
+            Gems: <span id="kingTotalDisplay">0</span>
+          </div>
+        </div>
+
+        <div class="category-section">
+          <h2 class="category-title">Butterflyfish</h2>
+          <div class="inputs-container">
+            <div class="input-group">
+              <label for="bf-tiny">Tiny</label>
+              <input
+                type="number"
+                id="bf-tiny"
+                class="bf-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="bf-small">Small</label>
+              <input
+                type="number"
+                id="bf-small"
+                class="bf-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="bf-medium">Med</label>
+              <input
+                type="number"
+                id="bf-medium"
+                class="bf-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="bf-large">Large</label>
+              <input
+                type="number"
+                id="bf-large"
+                class="bf-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="bf-huge">Huge</label>
+              <input
+                type="number"
+                id="bf-huge"
+                class="bf-input"
+                placeholder="0"
+              />
+            </div>
+          </div>
+          <div class="result-sub">Gems: <span id="bfTotalDisplay">0</span></div>
+        </div>
+
+        <div class="category-section">
+          <h2 class="category-title">Goldfish</h2>
+          <div class="inputs-container">
+            <div class="input-group">
+              <label for="gold-tiny">Tiny</label>
+              <input
+                type="number"
+                id="gold-tiny"
+                class="gold-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="gold-small">Small</label>
+              <input
+                type="number"
+                id="gold-small"
+                class="gold-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="gold-medium">Med</label>
+              <input
+                type="number"
+                id="gold-medium"
+                class="gold-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="gold-large">Large</label>
+              <input
+                type="number"
+                id="gold-large"
+                class="gold-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="gold-huge">Huge</label>
+              <input
+                type="number"
+                id="gold-huge"
+                class="gold-input"
+                placeholder="0"
+              />
+            </div>
+          </div>
+          <div class="result-sub">
+            Gems: <span id="goldTotalDisplay">0</span>
+          </div>
+        </div>
+
+        <div class="category-section">
+          <h2 class="category-title">Carp</h2>
+          <div class="inputs-container">
+            <div class="input-group">
+              <label for="carp-tiny">Tiny</label>
+              <input
+                type="number"
+                id="carp-tiny"
+                class="carp-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="carp-small">Small</label>
+              <input
+                type="number"
+                id="carp-small"
+                class="carp-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="carp-medium">Med</label>
+              <input
+                type="number"
+                id="carp-medium"
+                class="carp-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="carp-large">Large</label>
+              <input
+                type="number"
+                id="carp-large"
+                class="carp-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="carp-huge">Huge</label>
+              <input
+                type="number"
+                id="carp-huge"
+                class="carp-input"
+                placeholder="0"
+              />
+            </div>
+          </div>
+          <div class="result-sub">
+            Gems: <span id="carpTotalDisplay">0</span>
+          </div>
+        </div>
+
+        <div class="category-section">
+          <h2 class="category-title">Halibut</h2>
+          <div class="inputs-container">
+            <div class="input-group">
+              <label for="hal-tiny">Tiny</label>
+              <input
+                type="number"
+                id="hal-tiny"
+                class="hal-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="hal-small">Small</label>
+              <input
+                type="number"
+                id="hal-small"
+                class="hal-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="hal-medium">Med</label>
+              <input
+                type="number"
+                id="hal-medium"
+                class="hal-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="hal-large">Large</label>
+              <input
+                type="number"
+                id="hal-large"
+                class="hal-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="hal-huge">Huge</label>
+              <input
+                type="number"
+                id="hal-huge"
+                class="hal-input"
+                placeholder="0"
+              />
+            </div>
+          </div>
+          <div class="result-sub">
+            Gems: <span id="halTotalDisplay">0</span>
+          </div>
+        </div>
+
+        <div class="category-section">
+          <h2 class="category-title">Tuna</h2>
+          <div class="inputs-container">
+            <div class="input-group">
+              <label for="tuna-tiny">Tiny</label>
+              <input
+                type="number"
+                id="tuna-tiny"
+                class="tuna-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="tuna-small">Small</label>
+              <input
+                type="number"
+                id="tuna-small"
+                class="tuna-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="tuna-medium">Med</label>
+              <input
+                type="number"
+                id="tuna-medium"
+                class="tuna-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="tuna-large">Large</label>
+              <input
+                type="number"
+                id="tuna-large"
+                class="tuna-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="tuna-huge">Huge</label>
+              <input
+                type="number"
+                id="tuna-huge"
+                class="tuna-input"
+                placeholder="0"
+              />
+            </div>
+          </div>
+          <div class="result-sub">
+            Gems: <span id="tunaTotalDisplay">0</span>
+          </div>
+        </div>
+
+        <div class="category-section">
+          <h2 class="category-title">Sea Angler</h2>
+          <div class="inputs-container">
+            <div class="input-group">
+              <label for="ang-tiny">Tiny</label>
+              <input
+                type="number"
+                id="ang-tiny"
+                class="ang-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="ang-small">Small</label>
+              <input
+                type="number"
+                id="ang-small"
+                class="ang-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="ang-medium">Med</label>
+              <input
+                type="number"
+                id="ang-medium"
+                class="ang-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="ang-large">Large</label>
+              <input
+                type="number"
+                id="ang-large"
+                class="ang-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="ang-huge">Huge</label>
+              <input
+                type="number"
+                id="ang-huge"
+                class="ang-input"
+                placeholder="0"
+              />
+            </div>
+          </div>
+          <div class="result-sub">
+            Gems: <span id="angTotalDisplay">0</span>
+          </div>
+        </div>
+
+        <div class="category-section">
+          <h2 class="category-title">Acid Puffer</h2>
+          <div class="inputs-container">
+            <div class="input-group">
+              <label for="acid-tiny">Tiny</label>
+              <input
+                type="number"
+                id="acid-tiny"
+                class="acid-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="acid-small">Small</label>
+              <input
+                type="number"
+                id="acid-small"
+                class="acid-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="acid-medium">Med</label>
+              <input
+                type="number"
+                id="acid-medium"
+                class="acid-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="acid-large">Large</label>
+              <input
+                type="number"
+                id="acid-large"
+                class="acid-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="acid-huge">Huge</label>
+              <input
+                type="number"
+                id="acid-huge"
+                class="acid-input"
+                placeholder="0"
+              />
+            </div>
+          </div>
+          <div class="result-sub">
+            Gems: <span id="acidTotalDisplay">0</span>
+          </div>
+        </div>
+
+        <div class="category-section">
+          <h2 class="category-title">Piranha</h2>
+          <div class="inputs-container">
+            <div class="input-group">
+              <label for="piran-tiny">Tiny</label>
+              <input
+                type="number"
+                id="piran-tiny"
+                class="piran-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="piran-small">Small</label>
+              <input
+                type="number"
+                id="piran-small"
+                class="piran-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="piran-medium">Med</label>
+              <input
+                type="number"
+                id="piran-medium"
+                class="piran-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="piran-large">Large</label>
+              <input
+                type="number"
+                id="piran-large"
+                class="piran-input"
+                placeholder="0"
+              />
+            </div>
+            <div class="input-group">
+              <label for="piran-huge">Huge</label>
+              <input
+                type="number"
+                id="piran-huge"
+                class="piran-input"
+                placeholder="0"
+              />
+            </div>
+          </div>
+          <div class="result-sub">
+            Gems: <span id="piranTotalDisplay">0</span>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <div class="result-grand">
+            Total: <span id="grandTotalDisplay">0</span>
+          </div>
+          <button type="button" id="btnReset">Reset All</button>
+        </div>
+      </form>
+
+      <!-- price list -->
+      <section class="price-reference">
+        <h2 class="section-title">FISH PRICE LIST</h2>
+        <div class="price-table-wrapper">
+          <table class="price-table">
+            <thead>
+              <tr>
+                <th>Fish</th>
+                <th>Tiny</th>
+                <th>Small</th>
+                <th>Medium</th>
+                <th>Large</th>
+                <th>Huge</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="fish-col">
+                  <img src="img/Dumb_Fish.webp" class="fish-icon" />
+                  <span class="fish-name">Dumb Fish</span>
+                </td>
+                <td>5</td>
+                <td>10</td>
+                <td>30</td>
+                <td>50</td>
+                <td>100</td>
+              </tr>
+              <tr>
+                <td class="fish-col">
+                  <img src="img/Herring.webp" class="fish-icon" />
+                  <span class="fish-name">Herring</span>
+                </td>
+                <td>10</td>
+                <td>40</td>
+                <td>70</td>
+                <td>100</td>
+                <td>300</td>
+              </tr>
+              <tr>
+                <td class="fish-col">
+                  <img src="img/Kingfish.webp" class="fish-icon" />
+                  <span class="fish-name">Kingfish</span>
+                </td>
+                <td>10</td>
+                <td>40</td>
+                <td>70</td>
+                <td>100</td>
+                <td>300</td>
+              </tr>
+              <tr>
+                <td class="fish-col">
+                  <img src="img/Butterflyfish.webp" class="fish-icon" />
+                  <span class="fish-name">Butterflyfish</span>
+                </td>
+                <td>15</td>
+                <td>60</td>
+                <td>105</td>
+                <td>150</td>
+                <td>600</td>
+              </tr>
+              <tr>
+                <td class="fish-col">
+                  <img src="img/Goldfish.webp" class="fish-icon" />
+                  <span class="fish-name">Goldfish</span>
+                </td>
+                <td>15</td>
+                <td>60</td>
+                <td>105</td>
+                <td>150</td>
+                <td>600</td>
+              </tr>
+              <tr>
+                <td class="fish-col">
+                  <img src="img/carp.webp" class="fish-icon" />
+                  <span class="fish-name">Carp</span>
+                </td>
+                <td>20</td>
+                <td>80</td>
+                <td>140</td>
+                <td>200</td>
+                <td>600</td>
+              </tr>
+              <tr>
+                <td class="fish-col">
+                  <img src="img/halibut.webp" class="fish-icon" />
+                  <span class="fish-name">Halibut</span>
+                </td>
+                <td>20</td>
+                <td>80</td>
+                <td>140</td>
+                <td>200</td>
+                <td>600</td>
+              </tr>
+              <tr>
+                <td class="fish-col">
+                  <img src="img/tuna.webp" class="fish-icon" />
+                  <span class="fish-name">Tuna</span>
+                </td>
+                <td>40</td>
+                <td>160</td>
+                <td>280</td>
+                <td>400</td>
+                <td>1200</td>
+              </tr>
+              <tr>
+                <td class="fish-col">
+                  <img src="img/Sea_Angler.webp" class="fish-icon" />
+                  <span class="fish-name">Sea Angler</span>
+                </td>
+                <td>30</td>
+                <td>120</td>
+                <td>210</td>
+                <td>300</td>
+                <td>900</td>
+              </tr>
+              <tr>
+                <td class="fish-col">
+                  <img src="img/Acid_Puffer.webp" class="fish-icon" />
+                  <span class="fish-name">Acid Puffer</span>
+                </td>
+                <td>80</td>
+                <td>320</td>
+                <td>560</td>
+                <td>800</td>
+                <td>2400</td>
+              </tr>
+              <tr>
+                <td class="fish-col">
+                  <img src="img/Piranha.webp" class="fish-icon" />
+                  <span class="fish-name">Piranha</span>
+                </td>
+                <td>30</td>
+                <td>120</td>
+                <td>210</td>
+                <td>300</td>
+                <td>900</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- footer -->
+      <footer class="site-footer">
+        <p>&copy; 2026 Zogby. All Rights Reserved.</p>
+      </footer>
+    </div>
+
+    <div class="floating-bar" id="floatingBar">
+      <div class="floating-grand">
+        <span class="floating-grand-label">TOTAL:</span>
+        <span class="floating-grand-value"
+          ><span id="floatingGrandDisplay">0</span> GEMS</span
+        >
+      </div>
+      <button type="button" class="floating-reset" id="btnResetFloating">
+        RESET ALL
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

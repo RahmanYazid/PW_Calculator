@@ -1,0 +1,411 @@
+@import url(https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323:wght@400&display=swap);
+:root {
+  --bg: #0a0e1a;
+  --surface: #111827;
+  --surface2: #1a2235;
+  --border: #1e3a5f;
+  --accent: #00d4ff;
+  --accent2: #0088cc;
+  --gold: #ffd700;
+  --text: #c8e6f5;
+  --text-dim: #5a7a99;
+  --danger: #ff4757;
+  --green: #00ff88;
+  --pixel: 2px;
+  --fish-dumb: #7ecfff;
+  --fish-bf: #ff9de2;
+  --fish-gold: #ffd700;
+  --fish-her: #a8e6cf;
+  --fish-carp: #ffb347;
+  --fish-hal: #b8b8ff;
+  --fish-tuna: #ff6b6b;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "VT323", monospace;
+  background-color: var(--bg);
+  color: var(--text);
+  font-size: 18px;
+  line-height: 1.4;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image:
+    linear-gradient(rgb(0 212 255 / 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(0 212 255 / 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+  padding-bottom: 70px;
+  padding-top: 30pxpx;
+}
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(10 14 26 / 0.98);
+  border-bottom: var(--pixel) solid var(--accent);
+  padding: 12px 0;
+  z-index: 2000;
+  text-align: center;
+}
+.main-header h1 {
+  font-family: "Press Start 2P", monospace;
+  font-size: 16px;
+  color: var(--accent);
+  margin: 0;
+}
+.main-header h3 {
+  font-family: "VT323", monospace;
+  font-size: 14px;
+  color: var(--gold);
+  margin: 2px 0 0 0;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 10px 20px;
+}
+#fishForm {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.category-section {
+  display: flex;
+  align-items: center;
+  background: var(--surface);
+  border: var(--pixel) solid var(--border);
+  padding: 8px 15px;
+  gap: 15px;
+  border-radius: 4px;
+}
+.category-title {
+  width: 130px;
+  flex-shrink: 0;
+  font-family: "Press Start 2P", monospace;
+  font-size: 10px;
+  color: var(--text);
+}
+.inputs-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  flex-grow: 1;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+.input-group label {
+  font-family: "Press Start 2P", monospace;
+  font-size: 8px;
+  color: var(--text-dim);
+}
+.input-group input {
+  width: 100%;
+  max-width: 60px;
+  height: 28px;
+  background: var(--bg);
+  border: var(--pixel) solid var(--border);
+  color: var(--accent);
+  font-family: "VT323", monospace;
+  font-size: 20px;
+  text-align: center;
+}
+.input-group input::-webkit-outer-spin-button,
+.input-group input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input-group input {
+  -moz-appearance: textfield;
+}
+.result-sub {
+  width: 140px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-left: 1px solid var(--border);
+  padding-left: 10px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) #fff0;
+}
+.result-sub::-webkit-scrollbar {
+  height: 2px;
+}
+.result-sub::-webkit-scrollbar-thumb {
+  background: var(--accent);
+}
+.result-sub span {
+  font-family: "Press Start 2P", monospace;
+  font-size: 10px;
+  color: var(--green);
+  text-shadow: 0 0 8px rgb(0 255 136 / 0.5);
+  display: inline-block;
+  cursor: ew-resize;
+}
+.footer-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 24px;
+  padding: 20px 24px;
+  background: var(--surface2);
+  border: var(--pixel) solid var(--accent);
+  border-radius: 2px;
+  box-shadow: 0 0 24px rgb(0 212 255 / 0.2);
+}
+.result-grand {
+  font-family: "VT323", monospace;
+  font-size: 28px;
+  color: var(--text-dim);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.result-grand span {
+  font-family: "Press Start 2P", monospace;
+  font-size: 16px;
+  margin-top: 5px;
+  color: var(--gold);
+}
+#btnReset {
+  font-family: "Press Start 2P", monospace;
+  font-size: 9px;
+  padding: 10px 15px;
+  background: #fff0;
+  border: var(--pixel) solid var(--danger);
+  color: var(--danger);
+  cursor: pointer;
+}
+.floating-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--surface2);
+  border-top: var(--pixel) solid var(--accent);
+  padding: 10px 20px;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2000;
+}
+.floating-bar.show {
+  display: flex;
+}
+.floating-grand-value {
+  font-family: "Press Start 2P", monospace;
+  font-size: 12px;
+  color: var(--gold);
+}
+.floating-reset {
+  font-family: "Press Start 2P", monospace;
+  font-size: 8px;
+  padding: 8px 12px;
+  background: #fff0;
+  border: var(--pixel) solid var(--danger);
+  color: var(--danger);
+  cursor: pointer;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+.floating-reset:hover {
+  background: var(--danger);
+  color: #fff;
+}
+.price-reference {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.section-title {
+  font-family: "Press Start 2P", monospace;
+  font-size: 14px;
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 20px;
+}
+.price-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: var(--pixel) solid var(--border);
+  background: var(--surface);
+  border-radius: 4px;
+  margin-top: 10px;
+}
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "VT323", monospace;
+  font-size: 20px;
+}
+.price-table th {
+  background: var(--surface2);
+  color: var(--text-dim);
+  font-family: "VT323", monospace;
+  font-size: 20px;
+  padding: 12px;
+  border-bottom: var(--pixel) solid var(--border);
+  text-transform: uppercase;
+}
+.price-table td {
+  padding: 13px;
+  border-bottom: 1px solid rgb(30 58 95 / 0.3);
+  text-align: center;
+  color: var(--text);
+}
+.price-table tr:hover {
+  background: rgb(0 212 255 / 0.03);
+}
+.fish-col {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left !important;
+  font-weight: 700;
+  min-width: 150px;
+}
+.fish-icon {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  border: 1px solid var(--border);
+  background: #1a2235;
+  padding: 2px;
+  border-radius: 4px;
+  image-rendering: pixelated;
+}
+.price-table td:not(.fish-col)::after {
+  content: " 💎";
+  font-size: 16px;
+  opacity: 0.6;
+}
+.price-table tbody tr:nth-child(even) {
+  background: rgb(255 255 255 / 0.03);
+}
+.main-header,
+.floating-bar,
+.price-table-wrapper,
+.category-section {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  will-change: transform;
+}
+.site-footer {
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 20px;
+  border-top: 1px solid var(--border);
+}
+.site-footer p {
+  font-family: "Press Start 2P", monospace;
+  font-size: 8px;
+  color: var(--text-dim);
+  letter-spacing: 1px;
+  padding: 10px 0;
+}
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 60px;
+  }
+  .container {
+    padding: 80px 10px 30px;
+  }
+  .main-header {
+    padding: 10px 0;
+  }
+  .main-header h1 {
+    font-size: 13px;
+  }
+  .main-header h3 {
+    font-size: 12px;
+  }
+  .category-section {
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px;
+    align-items: center;
+    text-align: center;
+  }
+  .category-title {
+    width: 100%;
+    text-align: center;
+    font-size: 11px;
+    margin-bottom: 5px;
+  }
+  .inputs-container {
+    width: 100%;
+    gap: 8px;
+  }
+  .result-sub {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid var(--border);
+    padding: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-family: "Press Start 2P", monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+  }
+  .result-sub span {
+    font-size: 10px;
+    color: var(--green);
+    line-height: 1;
+  }
+  .fish-name {
+    display: none;
+  }
+  .fish-col {
+    min-width: 45px !important;
+    justify-content: center !important;
+    padding: 8px 4px !important;
+    border-right: 1px solid rgb(30 58 95 / 0.3);
+  }
+  .fish-icon {
+    width: 35px;
+    height: 35px;
+    margin: 0;
+    display: block;
+  }
+  .price-table th {
+    font-size: 16px;
+    padding: 10px 4px;
+    font-family: "VT323", monospace;
+    letter-spacing: 0;
+  }
+  .price-table td {
+    font-size: 15px;
+    padding: 8px 2px;
+  }
+  .price-table tbody tr:nth-child(even) {
+    background: rgb(255 255 255 / 0.03);
+  }
+  .floating-bar {
+    display: flex;
+  }
+  .footer-section {
+    display: none;
+  }
+  .floating-grand-value {
+    font-size: 11px;
+  }
+}
