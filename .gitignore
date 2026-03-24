@@ -1,5 +1,27 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Build outputs
+dist/
+build/
+
+# Operating System files
 .DS_Store
 Thumbs.db
-node_modules/
-dist/
+desktop.ini
+
+# IDE/Editor files
+.vscode/
+.idea/
+*.swp
+*.vscdb
+
+# Environment variables
 .env
+.env.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
