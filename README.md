@@ -1,6 +1,6 @@
 # Pixel Worlds Calculator
 
-A professional web-based utility designed for the Pixel Worlds community to calculate fishing efficiency and market profit margins. This project serves as a practical implementation of front-end development principles.
+A web-based utility designed for the Pixel Worlds community to calculate fishing efficiency and market profit margins. This project serves as a practical implementation of front-end development principles.
 
 ## Core Features
 * **Profit Analysis:** Calculate net earnings from various fish types based on real-time market inputs.
