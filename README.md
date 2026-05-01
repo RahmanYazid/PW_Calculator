@@ -4,7 +4,6 @@ A professional web-based utility designed for the Pixel Worlds community to calc
 
 ## Core Features
 * **Profit Analysis:** Calculate net earnings from various fish types based on real-time market inputs.
-* **Resource Optimization:** Track bait consumption and equipment costs for better resource management.
 * **Responsive Interface:** Fully optimized for seamless use across desktop and mobile devices.
 * **Lightweight Performance:** Built with clean, efficient code for fast loading and low overhead.
 
