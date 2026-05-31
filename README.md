@@ -1,5 +1,6 @@
 # Pixel Worlds Calculator
-**Live Demo:** [pw-calculator.vercel.app](https://pw-calculator.vercel.app)
+
+[![Live Demo](https://img.shields.io/badge/Live_Demo-pw--calculator.vercel.app-brightgreen?style=for-the-badge)](https://pw-calculator.vercel.app)
 
 A web-based utility designed for the Pixel Worlds community to calculate fishing efficiency and market profit margins. This project serves as a practical implementation of front-end development principles.
 
